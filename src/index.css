@@ -1,0 +1,307 @@
+html {
+  font-size: 63%;
+  box-sizing: border-box;
+  background-color: #f6f5f5;
+}
+
+body, #root {
+  height: 100vh;
+  margin: 0;
+}
+
+body,input, select, textarea{
+  font-size: 1.6rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.grid-container {
+  display: grid; 
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+a {
+  color: #8db596;
+  text-decoration: none;
+}
+
+a:hover{
+  color: orange ;
+}
+
+header{
+  grid-area: header;
+  background-color: #BEDBBB;
+  color: black;
+  padding: .5rem;
+  height: 100px;
+}
+
+header a{
+  color: black;
+  text-align: none;
+  text-decoration: none;
+  content: center;
+}
+
+header h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #707070;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.main {
+  flex: 3 60rem;
+  
+}
+
+.sidebar{
+  flex: 1 20rem; 
+}
+
+/* Services */
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.services li{
+  flex: 0 1 29rem;
+  height: 47rem;
+  padding: 1rem;
+  /* margin: 1rem; */
+
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.service img{
+  height: 30rem;
+  width: 30rem;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #8db596;
+  padding: 1rem;
+}
+
+.service-price {
+  display: flex;
+  justify-content: space-bewteen;
+  align-items: center;
+
+}
+
+.service-price div,
+.service-price button {
+  text-align: center; 
+  flex: .25;
+}
+
+.service-price div {
+  font-size: 2rem;
+}
+
+.button {
+  padding: 1rem;
+  border: .1rem;
+  border: solid;
+  border-color: #8db596;
+  border-radius: 10px;
+  background-color: #bedbbb;
+  font-family: 'Share Tech Mono', monospace;
+}
+.button:hover {
+  border: solid #707070 ;
+}
+
+/* Filter Component */
+
+.filter {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: .1rem #707070 solid;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+
+}
+
+.filter dvi {
+  flex: 1;
+}
+
+/* Cart CSS */
+
+.cart {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+} 
+
+.cart-header {
+  border-bottom: .1rem #707070 solid;
+}
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.cart-items img{
+  width: 5rem;
+}
+.cart li{
+  display: flex;
+
+}
+.cart-items li div{
+  padding: .5rem;
+}
+.cart-items li div:last-child{
+  flex: 1;
+}
+.right {
+  text-align: right;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.total >div{
+  font-size: 2rem;
+}
+.total >div,
+.total > button{
+  flex: 1;
+}
+
+/* Checkout Form Style  */
+.form{
+  width: 100%;
+}
+.form-container {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.form-container li{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input{
+  margin: .5rem;
+  padding: 1rem;
+  border: .1rem #707070 solid;  
+  border-radius: 1rem;
+}
+
+
+/* Service Details */
+.service-details{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-height: 96vh;
+}
+
+.service-details img{
+  max-height: 100vh;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.service-details-description {
+  flex: 1 1;
+  margin: 1rem;
+}
+
+.close-modal{
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 1000;
+}
+
+a.btn.w-100.mt-3, button.btn.w-100{
+  background-color: #8db596;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  height: 250px;
+  margin-bottom: 30px;
+  margin-left: 500px;
+}
+
+/* Order Details */
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.order-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-details li div {
+  padding: 10px;
+}
+.order-details .items {
+  text-align: right;
+  padding: 0;
+}
+.success-message {
+  color: green;
+}
