@@ -9,15 +9,18 @@ const app = express();
 app.use(bodyParser.json());
 
 // Initiailize Mongoose DB
+
+app.use("/", express.static(__dirname + "/build"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+
 mongoose.connect(
-	'mongodb://localhost/mitten-msp-db',
-	{
-	  useNewUrlParser: true,
-	  useUnifiedTopology: true,
-	  useCreateIndex: true,
-	  useFindAndModify: false
-	}
-  );
+  process.env.MONGODB_URL || "mongodb://localhost/mitten-msp-db",
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // define and create service model
 const Service = mongoose.model(
